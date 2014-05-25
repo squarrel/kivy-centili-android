@@ -13,7 +13,7 @@ import android.widget.Toast;
 import c.mpayments.android.*;
 
 
-public class Centili extends ActionBarActivity {
+public class Centili extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
