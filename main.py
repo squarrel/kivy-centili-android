@@ -47,6 +47,8 @@ class Panel(TabbedPanel):
 
 class MyApp(App):
     def build(self):
+        if platform() == 'android':
+            CentiliLib = autoclass('libs/CentiliLib-2.jar')
         panel = Panel()
         return panel
 
