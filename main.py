@@ -41,11 +41,13 @@ class Panel(TabbedPanel):
 	
 	if platform == 'android':
 		Centili = autoclass('org.myapp.Centili')
-		Centili.pr()
+		
 	
 	def buy(self):
 		if platform == 'android':
-			
+			Centili.pr()
+		else:
+			pass
 
 class MyApp(App):
     def build(self):
