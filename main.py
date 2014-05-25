@@ -11,43 +11,43 @@ from kivy.lang import Builder
 from kivy.uix.tabbedpanel import TabbedPanel
 from kivy.utils import platform
 if platform == 'android':
-	from jnius import autoclass
+    from jnius import autoclass
 
 
 Builder.load_string( '''
 <Panel>:
-	do_default_tab: False
-	TabbedPanelItem:
-		BoxLayout:
-			Button:
-				text: 'Buy'
-				on_press: root.buy()
-			Button:
-				text: 'test'
+    do_default_tab: False
+    TabbedPanelItem:
+        BoxLayout:
+            Button:
+                text: 'Buy'
+                on_press: root.buy()
+            Button:
+                text: 'test'
 
-			ScrollView:
-				Label:
-					text: 'test'
+            ScrollView:
+                Label:
+                    text: 'test'
 
-	TabbedPanelItem:
-		BoxLayout:
-			Button:
-				text: 'test'
-			Button:
-				text: 'test'
+    TabbedPanelItem:
+        BoxLayout:
+            Button:
+                text: 'test'
+            Button:
+                text: 'test'
 ''')
 
 class Panel(TabbedPanel):
 	
-	if platform == 'android':
-		Centili = autoclass('org.myapp.Centili')
+    if platform == 'android':
+        Centili = autoclass('org.myapp.Centili')
 		
 	
-	def buy(self):
-		if platform == 'android':
-			Centili.pr()
-		else:
-			pass
+    def buy(self):
+        if platform == 'android':
+            Centili.pr()
+        else:
+            pass
 
 class MyApp(App):
     def build(self):
