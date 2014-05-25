@@ -45,7 +45,9 @@ class Panel(TabbedPanel):
 	
     def buy(self):
         if platform == 'android':
-            Centili.pr()
+            pr = Centili.PurchaseRequest("421d33a2d56fe51207add3c07290f29a")
+            pr.setOfflineModeEnabled(true)
+            Centili.PurchaseManager.startPurchase(pr)
         else:
             pass
 
