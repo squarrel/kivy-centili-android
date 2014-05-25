@@ -1,3 +1,5 @@
+// this file is located at /.buildozer/android/platform/python-for-android/dist/default/src/org/myapp/
+
 package org.myapp;
 
 import android.support.v7.app.ActionBarActivity;
