@@ -53,7 +53,7 @@ public class Centili extends ActionBarActivity {
                 }
             });
 
-            PurchaseRequest pr = new PurchaseRequest("421d33a2d56fe51207add3c07290f29a");
+            PurchaseRequest pr = new PurchaseRequest("API-key-here");
             //pr.setClientId(<YOUR-CLIENT-ID>); // optional
             //pr.setInfo("Info text..."); // optional
             pr.setLanguageCode("EN"); //optional
@@ -64,7 +64,7 @@ public class Centili extends ActionBarActivity {
     
     
     public void onCheckServiceAvailabilityButtonClick(View v) {
-        PurchaseManager.checkServiceAvailabilityAsync("421d33a2d56fe51207add3c07290f29a", Centili.this,
+        PurchaseManager.checkServiceAvailabilityAsync("API-key-here", Centili.this,
                 new ServiceAvailabilityListener() {
                     @Override
                     public void onServiceStatusObtained(final int status) {
