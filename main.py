@@ -29,12 +29,6 @@ Builder.load_string( '''
                 Label:
                     text: 'test'
 
-    TabbedPanelItem:
-        BoxLayout:
-            Button:
-                text: 'test'
-            Button:
-                text: 'test'
 ''')
 
 class Panel(TabbedPanel):
