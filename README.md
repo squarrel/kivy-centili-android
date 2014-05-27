@@ -11,5 +11,5 @@ The original Android instructions for Centili implementation are here:
 
 Additional file is the Centili Library .jar file, which I include with Buildozer into the package. (CentiliLib-2.jar)
 
-I need to: 
-- mimic what the original Java code does, using Kivy and Pyjnius.
+Currently: 
+- I am working on the Centili.java file.
