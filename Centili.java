@@ -2,7 +2,7 @@
 
 package org.myapp;
 
-//import android.support.v7.app.ActionBarActivity;
+
 import org.renpy.android.PythonActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -16,17 +16,6 @@ import c.mpayments.android.*;
 
 public class Centili {
 
-    //@Override
-    //protected void onCreate(Bundle savedInstanceState) {
-        //super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_main);
-
-        //((Button)findViewById(R.id.buttonPurchase)).setOnClickListener(mPurchaseClick);
-    //}
-
-    //View.OnClickListener mPurchaseClick = new View.OnClickListener() {
-        //@Override
-        //public void onClick(View v) {
 
     static class PurchListener implements PurchaseListener { 
         @Override
@@ -64,8 +53,7 @@ public class Centili {
     pr.setLanguageCode("EN"); //optional
     pr.setOfflineModeEnabled(true); // optional
     PurchaseManager.startPurchase(pr, Centili.this);
-        //}
-    //};
+
     
     
     public void onCheckServiceAvailabilityButtonClick(View v) {
