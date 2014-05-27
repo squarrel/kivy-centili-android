@@ -66,10 +66,11 @@ public class Centili {
                         Centili.this.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                if (status == PurchaseManager.SERVICE_AVAILABLE)
+                                if (status == PurchaseManager.SERVICE_AVAILABLE) {
                                     //Toast.makeText(getApplicationContext(), "Service is available", Toast.LENGTH_LONG).show();
-                                else
+                                } else {
                                     //Toast.makeText(getApplicationContext(), "Service not available", Toast.LENGTH_LONG).show();
+                                }
                             }
                         });
                     }
