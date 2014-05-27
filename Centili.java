@@ -1,7 +1,8 @@
 package org.myapp;
 
-//import android.support.v7.app.ActionBarActivity;
+
 import org.renpy.android.PythonActivity;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -15,7 +16,7 @@ import c.mpayments.android.*;
 public class Centili {
 
 
-    static class PurchListener implements PurchaseListener { 
+    public class PurchListener implements PurchaseListener { 
         @Override
         public void onPurchaseSuccess(PurchaseResponse paramPurchaseResponse) {
             // handle purchase success
@@ -41,29 +42,30 @@ public class Centili {
         }
     }
 
-    static PurchListener purchListener = new PurchListener();
+    public PurchListener purchListener = new PurchListener();
     
-    static void purchaseCommit() {
     
-        Centili centili = new Centili();
+    Context context = (Context) PythonActivity.mActivity;
     
+    public void purchaseCommit() {
+        
         PurchaseManager.attachPurchaseListener(purchListener);
     
-        PurchaseRequest pr = new PurchaseRequest("API-key");
+        PurchaseRequest pr = new PurchaseRequest("your-api-key");
         //pr.setClientId(<YOUR-CLIENT-ID>); // optional
         //pr.setInfo("Info text..."); // optional
         pr.setLanguageCode("EN"); //optional
         pr.setOfflineModeEnabled(true); // optional
-        PurchaseManager.startPurchase(pr, centili.this);
+        PurchaseManager.startPurchase(pr, context);
     }
     
     public void onCheckServiceAvailabilityButtonClick(View v) {
-        PurchaseManager.checkServiceAvailabilityAsync("API-key", Centili.this,
+        PurchaseManager.checkServiceAvailabilityAsync("your-api-key", context,
                 new ServiceAvailabilityListener() {
                     @Override
                     public void onServiceStatusObtained(final int status) {
                         // response returned on a non UI thread
-                        Centili.this.runOnUiThread(new Runnable() {
+                        context.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
                                 if (status == PurchaseManager.SERVICE_AVAILABLE) {
