@@ -33,12 +33,9 @@ Builder.load_string( '''
 
 class Panel(TabbedPanel):
 	
-    if platform == 'android':
-        Centili = autoclass('org.myapp.Centili')
-		
-	
     def buy(self):
         if platform == 'android':
+            Centili = autoclass('org.myapp.Centili')
             centili = Centili()
             centili.purchaseCommit()
         else:
