@@ -35,16 +35,16 @@ class Panel(TabbedPanel):
 	
     def buy(self):
         if platform == 'android':
+            # we make use of Centili.java here
             Centili = autoclass('org.myapp.Centili')
             centili = Centili()
+            # trigger the function in which the purchase process starts
             centili.purchaseCommit()
         else:
             pass
 
 class MyApp(App):
     def build(self):
-        if platform() == 'android':
-            CentiliLib = autoclass('libs/CentiliLib-2.jar')
         panel = Panel()
         return panel
 
