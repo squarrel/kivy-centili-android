@@ -48,6 +48,7 @@ class MyApp(App):
         panel = Panel()
         return panel
 
+    # triggering the purchase sends the app in pause mode, so we return True here to enable the pause mode.
     def on_pause(self):
         return True
 
