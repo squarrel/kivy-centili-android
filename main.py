@@ -48,5 +48,8 @@ class MyApp(App):
         panel = Panel()
         return panel
 
+    def on_pause(self):
+        return True
+
 if __name__ == '__main__':
     MyApp().run()
