@@ -9,7 +9,8 @@ The original Android instructions for Centili implementation are here:
 - detailed instructions https://www.centili.com/manual/android/android-instructions.pdf
 - one small correction about the instructions is that should go "c.mpayments...", not "c.payments...". (when including the library, for example)
 
-Additional file is the Centili Library .jar file, which I include with Buildozer into the package. (CentiliLib-2.jar)
+Additional file is the Centili Library .jar file (CentiliLib-2.jar), which I put in a libs folder and include it with buildozer like this:
+android.add_jars = %(source.dir)s/libs/*.jar
 
-Currently: 
-- I am working on the Centili.java file.
+Status:
+This is a working example, except for the onCheckServiceAvailabilityButtonClick part in Centili.java, which I haven't put right yet, but it works without it, it seems. Have fun!
