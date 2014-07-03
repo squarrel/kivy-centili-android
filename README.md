@@ -12,7 +12,7 @@ The original Android instructions for Centili implementation are here:
 Additional file is the Centili Library .jar file (CentiliLib-2.jar), which I put in a libs folder and include it with buildozer like this:
 android.add_jars = %(source.dir)s/libs/*.jar
 
-The .java file is supposed to reside in /.buildozer/android/platform/python-for-android/dist/name-of-app/src/org/myapp directory of your buildozer.
+The .java file is supposed to reside in /.buildozer/android/platform/python-for-android/dist/name-of-app/src/org/myapp directory of your buildozer. The 'name-of-app' folder can be called 'default', too, I am not sure how buildozer does the naming.
 
 Status:
 This is a working example, except for the onCheckServiceAvailabilityButtonClick part in Centili.java, which I haven't put right yet, but it works without it, it seems. Have fun!
