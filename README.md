@@ -7,7 +7,7 @@ The kind of mobile payments where the user pays with their phone bill.
 The original Android instructions for Centili implementation are here: 
 - short version https://www.centili.com/android-library.html
 - detailed instructions https://www.centili.com/manual/android/android-instructions.pdf
-- one small correction about the instructions is that should go "c.mpayments...", not "c.payments...". (when including the library, for example)
+- one small correction about the instructions is that it should go "c.mpayments...", not "c.payments...". (when including the library, for example)
 
 Additional file is the Centili Library .jar file (CentiliLib-2.jar), which I put in a libs folder and include it with buildozer like this:
 android.add_jars = %(source.dir)s/libs/*.jar
